@@ -1,0 +1,29 @@
+<div id="app"></div>
+
+<div wisp-root>
+  <let count="0">
+    <effect>console.log(`Count is ${count}`)</effect>
+
+    <button @click="count--" :class="`count-${count}`">-</button>
+    {{count}}
+    <button  @click="count++">+</button>
+
+    <if :condition="count >= 5">
+      That's pretty big!
+    </if>
+
+    <!-- <rec self num="5">
+      {{num}}
+      <if condition="num > 0">
+        <self num="num - 1"></self>
+      </if>
+    </rec> -->
+
+  </let>
+</div>
+
+<!-- <div id="test">
+  default
+  <slot #then>then</slot>
+  <slot name="else">else</slot>
+</div> -->
